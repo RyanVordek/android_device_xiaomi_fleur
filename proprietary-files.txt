@@ -768,7 +768,6 @@ vendor/lib64/libaiawb_sun.so
 vendor/lib64/libaiawb_sun_model.so
 vendor/lib64/libalCFR.so
 vendor/lib64/libanc_dc_base.so
-vendor/lib64/libanc_dc_plugin_xiaomi_v2.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
@@ -842,9 +841,7 @@ vendor/lib64/libcameracustom.camera_exif.so
 vendor/lib64/libcameracustom.eis.so
 vendor/lib64/libcameracustom.flashlight.so
 vendor/lib64/libcameracustom.lens.so
-vendor/lib64/libcameracustom.plugin.so
 vendor/lib64/libcameracustom.so
-vendor/lib64/libcameracustom_all_sensor_modules.so
 vendor/lib64/libchromanr.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libfeature.face.so
@@ -868,11 +865,10 @@ vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/liblpcnr.so
 vendor/lib64/libmfllcore.so
-vendor/lib64/libmiStereoFactoryRemapBasicLib.so
-vendor/lib64/libmiStereoFactoryRemapLib.so
 vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgoengine.so;DISABLE_CHECKELF
+vendor/lib64/libalhLDC.so
 vendor/lib64/libmibokeh_mt6873.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libmsnr.so
@@ -939,17 +935,13 @@ vendor/lib64/libmtkcam_synchelper.so
 vendor/lib64/libmtkcam_sysutils.so
 vendor/lib64/libmtkcam_tuning_utils.so
 vendor/lib64/libmtkcam_ulog.so
-vendor/lib64/libremosaic_wrapper.so
-vendor/lib64/libremosaiclib.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libvidhance_calibration_tool.so
 vendor/lib64/libvidhance_stabilizer.so
-vendor/lib64/libwa_depth.so
-vendor/lib64/libwa_refocus.so
-vendor/lib64/libwa_rtdof.so
-vendor/lib64/libwa_widelens_undistort.so
+vendor/lib64/libarcsoft_dualcam_refocus_image.so
+vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/ov64b40_main_aac_mipi_raw_IdxMgr.so
 vendor/lib64/ov64b40_main_aac_mipi_raw_tuning.so
 vendor/lib64/ov64b40_main_ofilm_mipi_raw_IdxMgr.so
@@ -1069,15 +1061,16 @@ vendor/firmware/gt9896s_firmware_6781v01_1080x2300.bin
 vendor/firmware/remoteproc_scp
 
 # Display (Configs) - from sea V816.0.16.0.UHZMIXM
-vendor/etc/dsi_panel_k7s_38_0c_0a_video_mi.xml
-vendor/etc/dsi_panel_k7s_38_0c_0b_video_mi.xml
+vendor/etc/dsi_panel_k7sr_38_0c_0a_video_mi.xml
+vendor/etc/dsi_panel_k7sr_38_0c_0b_video_mi.xml
 vendor/etc/screen_light.xml
 
 # DRM (Widevine) - from zircon-user 13 TP1A.220624.014 OS2.0.2.0.VNOMIXM release-keys
-vendor/bin/hw/android.hardware.drm-service.widevine
-vendor/etc/init/android.hardware.drm-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
-vendor/lib64/libwvaidl.so
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/lib64/libwvhidl.so
+vendor/lib/libwvhidl.so
 
 # DRM (Widevine)
 vendor/lib64/liboemcrypto.so
@@ -1155,10 +1148,12 @@ vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 
 # MMAgent
-vendor/bin/hw/vendor.mediatek.hardware.mmagent-service
-vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc
+vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
+vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/mt6781/libmmagent.so:vendor/lib64/libmmagent.so
-vendor/lib64/vendor.mediatek.hardware.mmagent-V1-ndk.so
 
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
@@ -1173,24 +1168,27 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 
 # Neural Networks
-vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk-legacy
-vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
-vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
-vendor/etc/vintf/manifest/manifest_apuware_utils_aidl.xml
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-gpu.xml
+vendor/lib64/libneuropilot_hal_utils.so
+vendor/lib/libneuropilot_hal_utils.so
 vendor/etc/armnn_app.config
-vendor/lib64/mt6781/libneuron_adapter_mgvi.so:vendor/lib64/libneuron_adapter_mgvi.so
+vendor/lib64/libneuron_adapter.so:vendor/lib64/libneuron_adapter.so
+vendor/lib64/libneuron_platform.so
+vendor/lib64/libalLDC.so
 vendor/lib64/mt6781/libnir_neon_driver.so:vendor/lib64/libnir_neon_driver.so
-vendor/lib64/APUWareUtilsAidlServer.so
+vendor/lib64/APUWareUtilsServer.so
 vendor/lib64/libapu_mdw.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
-vendor/lib64/libneuralnetworks_sl_driver_mtk_legacy_prebuilt.so
 vendor/lib64/libneuroeara.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
-vendor/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so
-
+system_ext/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so:vendor/lib64/vendor.mediatek.hardware.apuware.utils-V1-ndk.so
+system_ext/lib/vendor.mediatek.hardware.apuware.utils-V1-ndk.so:vendor/lib/vendor.mediatek.hardware.apuware.utils-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 # NFC
 vendor/firmware/st21nfc_fw7.bin
 
@@ -1447,13 +1445,9 @@ vendor/thh/ta/isee_model.json
 # Tether Offload - from gale-user 15 AP3A.240905.015.A2 OS2.0.2.0.VGPMIXM release-keys
 vendor/bin/hw/tetheroffloadservice
 vendor/bin/netdagent
-vendor/etc/init/android.hardware.tetheroffload-V1-service.rc
 vendor/etc/init/netdagent.rc
-vendor/etc/vintf/manifest/CommandService.xml
-vendor/etc/vintf/manifest/android.hardware.tetheroffload-V1-service.xml
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
-vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
