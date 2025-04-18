@@ -17,4 +17,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.mms</name>
+        <version>1.0-6</version>
+        <interface>
+            <name>IMms</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>

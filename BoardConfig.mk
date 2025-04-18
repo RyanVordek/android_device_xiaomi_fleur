@@ -81,14 +81,25 @@ TARGET_SCREEN_DENSITY := 420
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sea
-TARGET_KERNEL_CONFIG := sea_debug_defconfig
-TARGET_KERNEL_NO_GCC := true
+TARGET_KERNEL_CONFIG := sea_defconfig
+TARGET_KERNEL_NO_GCC := false
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(PWD)/prebuilts/clang/kernel/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
-#TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
+
+# Kernel - prebuilt
+TARGET_FORCE_PREBUILT_KERNEL := true
+ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_INCLUDE_DTB_IN_BOOTIMG := 
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+BOARD_KERNEL_SEPARATED_DTBO := 
+endif
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
